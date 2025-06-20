@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 
 app = Flask(_name_)
-CORS(app)
+CORS(app, resources={r"/api/": {"origins": ""}})
 
 @app.route("/api/audio/upload", methods=["POST"])
 def upload_audio():
